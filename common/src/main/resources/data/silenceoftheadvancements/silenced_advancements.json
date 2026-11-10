@@ -1,6 +1,7 @@
 {
   "replace": false,
   "namespaces": [
+    "minecraft"
   ],
   "advancements": [
 
