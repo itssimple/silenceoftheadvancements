@@ -17,7 +17,7 @@ import java.util.function.Consumer;
 public abstract class PlayerAdvancementsMixin {
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    @Redirect(method = "award", at = @At(value = "INVOKE", target= "Ljava/util/Optional;ifPresent(Ljava/util/function/Consumer;)V"))
+    @Redirect(method = "award", at = @At(value = "INVOKE", target= "Ljava/util/Optional;ifPresent(Ljava/util/function/Consumer;)V"), remap = false)
     private void award(Optional<DisplayInfo> display,
                        Consumer<? super DisplayInfo> consumer,
                        AdvancementHolder advancement,

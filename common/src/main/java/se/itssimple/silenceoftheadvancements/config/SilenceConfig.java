@@ -1,7 +1,6 @@
 package se.itssimple.silenceoftheadvancements.config;
 
 import java.util.List;
-import java.util.regex.Pattern;
 
 public record SilenceConfig(
         List<String> namespaces,

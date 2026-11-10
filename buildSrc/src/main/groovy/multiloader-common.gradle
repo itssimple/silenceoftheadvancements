@@ -30,11 +30,6 @@ repositories {
         name = 'BlameJared'
         url = 'https://maven.blamejared.com'
     }
-
-    maven {
-        name = 'NoLifeKing85'
-        url = "https://raw.githubusercontent.com/itssimple/.maven/refs/heads/main/"
-    }
 }
 
 // Declare capabilities on the outgoing configurations.
@@ -93,7 +88,8 @@ processResources {
             'credits'                   : credits,
             'java_version'              : java_version,
             'neoforge_version'          : neoforge_version,
-            'neoloader_version'         : neoloader_version
+            'neoloader_version'         : neoloader_version,
+            'issue_tracker_url'         : issue_tracker_url
     ]
 
     var jsonExpandProps = expandProps.collectEntries {

@@ -2,7 +2,7 @@ package se.itssimple.silenceoftheadvancements.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.SimplePreparableReloadListener;
 import net.minecraft.util.profiling.ProfilerFiller;
@@ -15,11 +15,15 @@ import java.io.Reader;
 public class ConfigReloadListener extends SimplePreparableReloadListener<SilenceConfig> {
     private static final Gson GSON = new GsonBuilder().create();
 
-    private static final ResourceLocation CONFIG_FILE =
-            ResourceLocation.fromNamespaceAndPath(
+    public static final Identifier ID =
+            Identifier.fromNamespaceAndPath(Reference.MOD_ID, "config_reload_listener");
+
+    private static final Identifier CONFIG_FILE =
+            Identifier.fromNamespaceAndPath(
                     Reference.MOD_ID,
                     "silenced_advancements.json"
             );
+
 
     @Override
     protected SilenceConfig prepare(

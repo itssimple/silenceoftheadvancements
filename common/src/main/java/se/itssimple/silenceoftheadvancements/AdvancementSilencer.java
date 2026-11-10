@@ -1,6 +1,6 @@
 package se.itssimple.silenceoftheadvancements;
 
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import se.itssimple.silenceoftheadvancements.config.SilenceConfig;
 import se.itssimple.silenceoftheadvancements.data.Constants;
 
@@ -33,7 +33,7 @@ public class AdvancementSilencer {
         }
     }
 
-    public static boolean isSilenced(ResourceLocation id)
+    public static boolean isSilenced(Identifier id)
     {
         CompiledConfig current = config;
 
